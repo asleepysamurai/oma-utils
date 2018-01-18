@@ -1,0 +1,13 @@
+{
+  "name": "oma-utils",
+  "version": "0.0.1",
+  "description": "OMA common utils",
+  "main": "src/index.js",
+  "repository": "git@bitbucket.org:84upon2/oma-utils.git",
+  "author": "Balaganesh Damodaran <asleepysamurai@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "superagent": "^3.8.2"
+  }
+}
