@@ -9,8 +9,7 @@ const defaults = {
     apiPrefix: 'api',
     versionPrefix: 'v',
     host: 'localhost',
-    protocol: 'https',
-    port: '443'
+    protocol: 'https'
 };
 
 function API(options, assumeLocal) {
