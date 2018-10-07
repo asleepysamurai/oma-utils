@@ -26,6 +26,7 @@ function filterEmptyStrings(obj) {
 function APIClient(opts) {
     opts = typeUtils.isObject(opts) ? opts : {};
     this._api = new API(opts);
+    this.userAgent = opts.userAgent;
 };
 
 APIClient.prototype.request = function(method, partialRoute, data, authKey) {
@@ -43,6 +44,11 @@ APIClient.prototype.request = function(method, partialRoute, data, authKey) {
 
     let req = xhr[method](url)
         .accept('json');
+
+    if (this.userAgent) {
+        req.set('user-agent', this.userAgent);
+        req.set('User-Agent', this.userAgent);
+    }
 
     if (platform == 'node' && isFormData) {
         dataFields.forEach(item => {
